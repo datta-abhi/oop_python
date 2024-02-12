@@ -15,6 +15,24 @@ class Product:
         print("Product: ",self.name)
         print("Price: ",self.price)
 
-p1 = Product("","")
+# inheritance child class inherits parent Class
+class DigitalProduct(Product):
+
+    def __init__(self,link):
+        # digital products has additional attribute link other than name and price
+        self.link = link
+
+    def get_link(self):
+        self.link = input("Enter the link: ")
+
+    def show_link(self):
+        print('Link to view: ',self.link)
+
+
+
+
+p1 = DigitalProduct("")
 p1.get_data()
+p1.get_link()
 p1.show_data()
+p1.show_link()
